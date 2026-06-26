@@ -1,0 +1,33 @@
+# claude-vault: version-control only the portable, reusable config from ~/.claude.
+# Strategy: ignore everything by default, then explicitly allow safe config.
+
+# 1) Ignore all top-level entries by default
+/*
+
+# 2) Allow repo meta + portable config
+!/.gitignore
+!/README.md
+!/CLAUDE.md
+!/settings.json
+!/hooks/
+!/agents/
+
+# 3) skills/: keep ONLY the authored skill dirs, never the plugin symlinks
+!/skills/
+/skills/*
+!/skills/gitnexus-cli/
+!/skills/gitnexus-debugging/
+!/skills/gitnexus-exploring/
+!/skills/gitnexus-guide/
+!/skills/gitnexus-impact-analysis/
+!/skills/gitnexus-pr-review/
+!/skills/gitnexus-refactoring/
+!/skills/goalsmith/
+!/skills/opencode-dispatch/
+!/skills/self-learning/
+!/skills/wrap-up/
+!/skills/yagni/
+!/skills/zettel-wiki/
+
+# 4) Drop generated python caches
+**/__pycache__/
