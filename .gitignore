@@ -10,18 +10,14 @@
 !/CLAUDE.md
 !/settings.json
 !/hooks/
+/hooks/gitnexus/
 !/agents/
 
 # 3) skills/: keep ONLY the authored skill dirs, never the plugin symlinks
+#    (gitnexus-* skills are plugin-managed — intentionally not tracked here)
 !/skills/
 /skills/*
-!/skills/gitnexus-cli/
-!/skills/gitnexus-debugging/
-!/skills/gitnexus-exploring/
-!/skills/gitnexus-guide/
-!/skills/gitnexus-impact-analysis/
-!/skills/gitnexus-pr-review/
-!/skills/gitnexus-refactoring/
+!/skills/design-playbook/
 !/skills/goalsmith/
 !/skills/opencode-dispatch/
 !/skills/self-learning/
